@@ -1,0 +1,272 @@
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em
+{
+	margin:0;
+	padding:0;
+	border:0;
+}
+ul,ol,li
+{
+	font-size: 16px;
+	font-family: "微软雅黑";
+	list-style:none;
+}
+input,button
+{
+	margin:0;
+	font-size:12px;
+	vertical-align:middle;
+}
+input[type="submit"]{
+	color: #1BBC9B;
+	font-size: 1.6em;
+	border:2px solid #1BBC9B;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-o-border-radius: 50px;
+	-ms-border-radius: 50px;
+	text-decoration: none;
+	padding: 0.6em 2em;
+	outline:none;
+	background: none;
+}
+input[type="submit"]:hover{
+	border:2px solid #1BBC9B;
+	background:#1BBC9B ;
+	color: #fff;
+}
+body
+{
+	font-size:12px;
+	font-family:arial, Helvetica, sans-serif;  
+	text-align:center; 
+	margin:0 auto;
+	background: url(../images/banner.jpg);
+	background-repeat: no-repeat;
+	background-size:100%; 
+}
+table
+{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+a
+{
+	color:#ffffff;
+	text-decoration:none;
+}
+a:hover
+{
+	color:#3570D2; 
+	text-decoration:underline;
+}
+em
+{
+	font-style:normal;
+}
+h5
+{ 
+	font-size:12px;
+}
+
+.box-163css
+{ 
+	width:550px;
+	margin:20px auto;
+	margin-left: 609px;
+	position:relative;
+}
+.searchbg
+{
+	padding-right: 0px; 
+	padding-left: 2px;
+	right: 0px; 
+	padding-bottom: 0px;
+	width: 962px;
+	padding-top: 2px; 
+	position: absolute; 
+	top: 62px; 
+	height: 34px
+}
+.searchContainer 
+{
+	padding-right: 0px; 
+	padding-left: 2px; 
+	right: 0px; 
+	padding-bottom: 0px; 
+	width: 962px; 
+	padding-top: 2px; 
+	position: absolute; 
+	top: 62px; 
+	height: 34px
+}
+.searchbg 
+{
+	background:url(../images/inbg01.png) no-repeat;
+}
+.searchselect 
+{
+	z-index: 49; 
+	float: left; 
+	width: 91px; 
+	position: relative; 
+	height: 33px
+}
+.searchselect span 
+{
+	float: left; 
+	height: 33px
+}
+.searchselect a.searchselectbtn 
+{
+	float: left; 
+	height: 33px
+}
+.searchselect span 
+{
+	font-size: 16px;
+	font-family: "微软雅黑";
+	width: 91px; 
+	color: #ffffff; 
+	text-indent: -2px; 
+	line-height: 28px; 
+	position: relative
+}
+.searchselectbtn 
+{ 
+	width: 10px
+}
+.searchContainer input
+{
+	background:rgba(255, 255, 255, 0.6) none repeat scroll 0 0 !important;
+	filter:alpha(opacity=100); 
+	padding-right: 4px; 
+	padding-left: 4px;
+	float: left; 
+	padding-bottom: 4px; 
+	width: 731px;
+	line-height: 19px; 
+	padding-top: 0px; 
+	height: 28px; 
+	/*border:1px solid ;*/
+	border-top-width: 0px; 
+	margin-left:1px;
+	color: #1ABB9A;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+.searchbtn 
+{
+	float: left; 
+	width: 69px; 
+	height: 25px
+}
+.searchselect ul 
+{
+
+	display: none; 
+	z-index: 150; 
+	left: -1px; 
+	overflow-x: hidden; 
+	width: 91px; 
+	position: absolute; 
+	top: 33px;
+	height: 56px;
+}
+.searchselect ul li 
+{
+	float: left; 
+	width: 91px; 
+	height: 24px; 
+	text-align:center;
+}
+.searchselect ul li a 
+{
+	float: left; 
+	width: 91px; 
+	height: 24px
+}
+.searchselect ul li 
+{
+	background:rgba(255, 255, 255, 0.0) none repeat scroll 0 0 !important;
+	filter:alpha(opacity=100); 
+}
+.searchselect ul li a 
+{
+	font-size: 16px;
+	font-family: "微软雅黑";
+	width: 90px; 
+	line-height: 24px
+}
+.searchselect ul li a:hover 
+{
+	background: #3570D2; 
+	color: #fff; 
+	text-decoration: none
+}
+.searchselect ul li a.current 
+{
+	color: #9c9c9c
+}
+.searchselect ul li a.current:hover 
+{ 
+	color: #9c9c9c
+}
+.searchselect ul li.last 
+{ 
+	overflow: hidden; 
+	width: 91px;
+	height: 5px
+}
+.top-container
+{
+	height: 60px;
+}
+.bottom-container
+{
+	margin-top: 100px;
+}
+
+.middle-container
+{
+	margin-top: 30px;
+	position: relative;
+	width: 1339px;
+	height: 72px;
+}
+
+.top-container .content-container
+{
+	margin-left: 868px;
+	margin-top: 34px;
+}
+
+.middle-container .content-container
+{
+	width: 254px;
+	height: 72px;
+	top: 50%;
+	left: 50%;
+	margin-top: -36px;
+	margin-left: -127px;
+	position: absolute;
+}
+
+.top-container .content-container ul
+{
+	float: left;
+	width: 120px;
+	font-size: 16px;
+}
+
+.top-container .content-container a
+{
+	color: rgba(255,255,255,0.9);
+}
+
+.middle-container .content-container h1
+{
+	font-size: 36px;
+	color: #1ABB9A;
+}
