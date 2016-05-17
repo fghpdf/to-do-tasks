@@ -1,0 +1,47 @@
+<%- include header.html %>
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <form class="ui large form" action="/login" method="post">
+      <% if(typeof(errorMessage) !== 'undefined') {%>
+      <div class="ui negative message transition">
+        <i class="close icon"></i>
+        <div class="header">提示</div>
+        <p><%= errorMessage %></p>
+      </div>
+      <% } %>
+      <% if(typeof(message) !== 'undefined') {%>
+      <div class="ui info message transition">
+        <i class="close icon"></i>
+        <div class="header">提示</div>
+        <p><%= message %></p>
+      </div>
+      <% } %>
+      <div class="ui stacked segment">
+        <div class="field">
+          <h2 class="ui tea1 header">
+            <div class="content">
+              登录
+            </div>
+          </h2>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input id="userEmail" name="userEmail" type="email" placeholder="请输入您的邮箱" required="required">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input id="userPassword" name="userPassword" type="password" placeholder="请输入对应的密码" required="required">
+          </div>
+        </div>
+        <button class="ui fluid large teal button" type="submit">登录</button>
+      </div>
+      <div class="ui blue segment">
+        <a class="ui fluid large blue button" href="/register">注册</a>
+      </div>
+    </form>
+  </div>
+</div>
+<%- include footer.html %>

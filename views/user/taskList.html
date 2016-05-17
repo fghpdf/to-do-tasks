@@ -1,0 +1,82 @@
+<%- include header.html %>
+<div class="ui grid">
+  <div class="row">
+    <div class="column">
+      <div class="ui">
+        <div class="ui huge stackable menu">
+          <div class="item">
+            <img class="ui tiny image" src="/img/logo.png" height="100%">
+          </div>
+          <a class="item" href="/">
+            <i class="home blue icon"></i>用户首页
+          </a>
+          <a class="item" href="/user/taskAdd">
+            <i class="add teal icon"></i>添加任务
+          </a>
+          <a class="item" href="/user/progress">
+            <i class="browser yellow icon"></i>查看完成进度
+          </a>
+          <a class="active item" href="/user/taskList">
+            <i class="blue tasks icon"></i>查看任务列表
+          </a>
+          <div class="right stackable menu">
+          </div>
+          <div class="item">
+            <i class="user green icon"></i><%= userName %>
+          </div>
+          <a class="item" href="/logout">
+            <i class="sign out red icon"></i>登出
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="ui raised  padded text container piled segment">
+        <% if(typeof(message) !== 'undefined') {%>
+        <div class="ui message transition">
+          <i class="close icon"></i>
+          <div class="header">提示</div>
+          <p><%= message %></p>
+        </div>
+        <% } %>
+        <table class="ui inverted blue table">
+          <thead>
+          <tr>
+            <th>编号</th>
+            <th>名称</th>
+            <th>开始时间</th>
+            <th>结束时间</th>
+            <th>紧急程度</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% for(var num = 0; num < taskList.length; num++) { %>
+          <tr>
+            <td><%= taskList[num].id %></td>
+            <td><%= taskList[num].taskName %></td>
+            <td><%= taskList[num].taskStartTime.toLocaleDateString() %></td>
+            <td><%= taskList[num].taskEndTime.toLocaleDateString() %></td>
+            <% if(taskList[num].taskLevel === '1') { %>
+            <td>紧急</td>
+            <% } else { %>
+            <td>一般</td>
+            <% } %>
+            <td>
+              <div class="ui buttons">
+                <button class="ui yellow button" id="updateTask">修改</button>
+                <div class="or" data-text="或"></div>
+                <button class="ui red button" id="deleteTask">删除</button>
+              </div>
+            </td>
+          </tr>
+          <% } %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include footer.html %>

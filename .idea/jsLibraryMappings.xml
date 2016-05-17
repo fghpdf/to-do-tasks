@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$" libraries="{login_model node_modules}" />
+    <file url="PROJECT" libraries="{async-DefinitelyTyped, bcrypt-DefinitelyTyped, bcryptjs-DefinitelyTyped, cookie-parser-DefinitelyTyped, cookie-session-DefinitelyTyped, express-DefinitelyTyped, express-session-DefinitelyTyped, knex-DefinitelyTyped, log4js-DefinitelyTyped, login_model node_modules, multer-DefinitelyTyped, node-DefinitelyTyped, passport-DefinitelyTyped, passport-local-DefinitelyTyped, pathjs-DefinitelyTyped, wechat-api, weixin-api}" />
+    <includedPredefinedLibrary name="ECMAScript 6" />
+    <includedPredefinedLibrary name="Node.js Core" />
+  </component>
+</project>

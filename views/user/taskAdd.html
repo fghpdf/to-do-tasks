@@ -1,0 +1,70 @@
+<%- include header.html %>
+<div class="ui grid">
+  <div class="row">
+    <div class="column">
+      <div class="ui">
+        <div class="ui huge stackable menu">
+          <div class="item">
+            <img class="ui tiny image" src="/img/logo.png" height="100%">
+          </div>
+          <a class="item" href="/">
+            <i class="home blue icon"></i>用户首页
+          </a>
+          <a class="active item" href="/user/taskAdd">
+            <i class="add teal icon"></i>添加任务
+          </a>
+          <a class="item" href="/user/progress">
+            <i class="browser yellow icon"></i>查看完成进度
+          </a>
+          <a class="item" href="/user/taskList">
+            <i class="blue tasks icon"></i>查看任务列表
+          </a>
+          <div class="right stackable menu">
+          </div>
+          <div class="item">
+            <i class="user green icon"></i><%= userName %>
+          </div>
+          <a class="item" href="/logout">
+            <i class="sign out red icon"></i>登出
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="ui raised very padded text container piled segment">
+        <% if(typeof(message) !== 'undefined') {%>
+        <div class="ui message transition">
+          <i class="close icon"></i>
+          <div class="header">提示</div>
+          <p><%= message %></p>
+        </div>
+        <% } %>
+        <form class="ui form" action="/user/taskAdd" method="post">
+          <div class="required field">
+            <label>任务名称</label>
+            <input type="text" name="taskName" placeholder="请填写任务名" required="required">
+          </div>
+          <div class="required field">
+            <label for="startDate">任务开始时间</label>
+            <input type="text" name="taskStartTime" id="startDate" placeholder="点击选择时间" required="required">
+          </div>
+          <div class="required field">
+            <label for="endDate">任务结束时间</label>
+            <input type="text" name="taskEndTime" id="endDate" placeholder="点击选择时间"  required="required">
+          </div>
+          <div class="required field">
+            <label for="selectTaskLevel">紧急程度</label>
+            <select class="ui selection" name="taskLevel" id="selectTaskLevel">
+              <option value="1">紧急</option>
+              <option value="2">一般</option>
+            </select>
+          </div>
+          <button class="ui basic button" type="submit"><i class="icon blue add"></i> 提交 </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include footer.html %>

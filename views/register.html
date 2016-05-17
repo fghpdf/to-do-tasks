@@ -1,0 +1,58 @@
+<%- include header.html %>
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <form class="ui large form" action="/register" method="post">
+      <% if(typeof(errorMessage) !== 'undefined') {%>
+      <div class="ui message transition">
+        <i class="close icon"></i>
+        <div class="header">提示</div>
+        <p><%= errorMessage %></p>
+      </div>
+      <% } %>
+      <div class="ui stacked segment">
+        <div class="field">
+          <h2 class="ui tea1 header">
+            <div class="content">
+              注册
+            </div>
+          </h2>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input id="userName" name="userName" type="text" placeholder="请输入您的姓名" required="required">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="mail icon"></i>
+            <input id="userEmail" name="userEmail" type="email" placeholder="请输入您的邮箱" required="required">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="phone icon"></i>
+            <input id="userPhone" name="userPhone" type="text" placeholder="请输入您的手机号" required="required">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input id="userPassword" name="userPassword" type="password" placeholder="请输入对应的密码" required="required">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input id="userPasswordRepeat" name="userPasswordRepeat" type="password" placeholder="请确认输入的密码" required="required">
+          </div>
+        </div>
+        <button class="ui fluid large teal button" type="submit">确认</button>
+      </div>
+      <div class="ui blue segment">
+        <a class="ui fluid large blue button" href="/login">登录</a>
+      </div>
+    </form>
+  </div>
+</div>
+<%- include footer.html %>

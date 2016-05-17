@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="bcrypt-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="bcryptjs-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="express-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="node-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="passport-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="login_model node_modules" level="project" />
+    <orderEntry type="library" name="async-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="knex-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="passport-local-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="cookie-session-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="cookie-parser-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="express-session-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="pathjs-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="log4js-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="multer-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="weixin-api" level="project" />
+    <orderEntry type="library" name="wechat-api" level="project" />
+  </component>
+</module>

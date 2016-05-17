@@ -1,0 +1,84 @@
+<%- include header.html %>
+<div class="ui grid">
+  <div class="row">
+    <div class="column">
+      <div class="ui">
+        <div class="ui huge stackable menu">
+          <div class="item">
+            <img class="ui tiny image" src="/img/logo.png" height="100%">
+          </div>
+          <a class="active item" href="/">
+            <i class="home blue icon"></i>用户首页
+          </a>
+          <a class="item" href="/user/taskAdd">
+            <i class="add teal icon"></i>添加任务
+          </a>
+          <a class="item" href="/user/progress">
+            <i class="browser yellow icon"></i>查看完成进度
+          </a>
+          <a class="item" href="/user/taskList">
+            <i class="tasks blue icon"></i>查看任务列表
+          </a>
+          <div class="right stackable menu">
+          </div>
+          <div class="item">
+            <i class="user green icon"></i><%= userName %>
+          </div>
+          <a class="item" href="/logout">
+            <i class="sign out red icon"></i>登出
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="ui six stackable centered special cards">
+        <% for(var num = 0; num < taskList.length; num++) { %>
+        <div class="card">
+          <div class="blurring dimmable image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center">
+                  <% if(taskList[num].taskStatus === 0) { %>
+                  <button class="ui inverted blue button" id="completeTask">点击完成</button>
+                  <% } else { %>
+                  <button class="ui inverted blue disabled button">已经完成</button>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+            <% if(taskList[num].taskStatus === 0) {
+                 if(taskList[num].taskLevel === 1) { %>
+                   <img src="/img/1.png">
+            <%   } else if(taskList[num].taskLevel === 2) {  %>
+                   <img src="/img/2.png">
+            <%   }
+             } else { %>
+            <img src="/img/complete.png">
+            <% } %>
+          </div>
+          <div class="content">
+            <!--任务名-->
+            <div class="header"><%= taskList[num].taskName %></div>
+            <!--任务状态-->
+            <% if(taskList[num].taskStatus === 0) { %>
+            <div class="meta">未完成</div>
+            <% } else { %>
+            <div class="meta">已完成</div>
+            <% } %>
+            <!--任务紧急程度-->
+            <% if(taskList[num].taskLevel === 1 || taskList[num].taskLevel === '1') { %>
+            <div class="description"><%= '紧急' %></div>
+            <% } else { %>
+            <div class="description"><%= '一般' %></div>
+            <% } %>
+          </div>
+          <div class="extra content">No.<%= taskList[num].id %></div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include footer.html %>

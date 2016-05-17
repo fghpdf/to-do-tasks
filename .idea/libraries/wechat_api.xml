@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="wechat-api" type="javaScript">
+    <properties>
+      <option name="frameworkName" value="node_modules" />
+    </properties>
+    <CLASSES />
+    <DOCUMENTATION>
+      <root url="http://badge.fury.io/js/wechat" />
+    </DOCUMENTATION>
+    <SOURCES />
+  </library>
+</component>
