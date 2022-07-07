@@ -29,6 +29,7 @@
     "knex": "latest",
     "later": "^1.2.0",
     "wechat-api": "^1.27.1",
-    "weixin-api": "^0.1.7"
+    "weixin-api": "^0.1.7",
+    "debug": ">=2.6.9"
   }
 }
